@@ -1,0 +1,18 @@
+version: '3'
+services:
+  webapp:
+    restart: always
+    build:
+      context: .
+      args:
+        - no-cache
+    container_name: "${CONTAINER_NAME}"
+    # env_file: .env
+    # volumes:
+    #  - ./vol:/root
+    ports:
+      - "8080:${NODEAPP_PORT}"
+    # environment:
+    #   - NGINX_HOST=foobar.com
+    #   - NGINX_PORT=80
+    # command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
