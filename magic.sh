@@ -9,5 +9,5 @@ ssh-keyscan $NODEAPP_GIT_DOMAIN >> ~/.ssh/known_hosts
 
 mkdir -p /var/www/nodeapp
 cd /var/www/nodeapp
-git clone asdf
+git clone $NODEAPP_GIT_REPO ./
 git checkout $NODEAPP_GIT_BRA
